@@ -17,6 +17,9 @@ public class ActiveAnimation : MonoBehaviour
     public GameObject handGunLeft;
     public GameObject handGunRight;
 
+
+
+
     // Start is called before the first frame update
     private void Awake()
     {

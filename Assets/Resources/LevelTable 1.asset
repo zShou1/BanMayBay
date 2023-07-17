@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88fa38ee0fbed41418fb4501aa6e42b9, type: 3}
+  m_Name: LevelTable 1
+  m_EditorClassIdentifier: 
+  waveList:
+  - orbitList:
+    - timeStart: 1
+      timeDelay: 0
+      enemyType: 2
+      enemyNum: 1
+      isRotateToPath: 1
+      mainPath: {fileID: 398720611047128294, guid: a6b78eb10e24aa1489483de8924cb757, type: 3}
+      additionPath: {fileID: 709891319268543041, guid: 5e4e311bf669bad40a9d3fce03396486, type: 3}

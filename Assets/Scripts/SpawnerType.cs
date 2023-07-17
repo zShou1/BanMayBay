@@ -23,4 +23,5 @@ public enum SpawnerType
     WaveBullet1,
     WaveBullet2,
     FireBullet,
+    Enemy2,
 }

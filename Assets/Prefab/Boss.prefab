@@ -505,11 +505,11 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   angleMin: 10
   angleMax: 60
-  _listFirePoint:
-  - {fileID: 7659756602973097490}
-  wait_time: 2
   direction: {x: 0, y: 0, z: 0}
   angle: 0
+  _listFirePoint:
+  - {fileID: 7659756602973097490}
+  wait_time: 4
 --- !u!50 &3403935192046938750
 Rigidbody2D:
   serializedVersion: 4
@@ -588,6 +588,7 @@ MonoBehaviour:
   healthbar: {fileID: 0}
   explosionType: 0
   coinType: 0
+  damage: 50
   healthBar: {fileID: 7501873492396373438}
   currentHealthBar: {fileID: 8972344171064604720}
 --- !u!1 &4852596652911793574
@@ -926,6 +927,7 @@ MonoBehaviour:
   healthbar: {fileID: 0}
   explosionType: 1
   coinType: 1
+  damage: 50
   healthBar: {fileID: 4839633381385392412}
   currentHealthBar: {fileID: 6319110643906976914}
 --- !u!114 &4957780081090798143
@@ -967,6 +969,7 @@ MonoBehaviour:
   healthbar: {fileID: 0}
   explosionType: 1
   coinType: 1
+  damage: 50
 --- !u!1 &4852596652978960086
 GameObject:
   m_ObjectHideFlags: 0
@@ -1131,10 +1134,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b2c5fa1eb2f66140a8bcb96d641f5c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 700
   healthbar: {fileID: 0}
   explosionType: 0
   coinType: 0
+  damage: 50
   healthBar: {fileID: 1404494106896521444}
   currentHealthBar: {fileID: 569119035541427562}
 --- !u!1 &4852596652981400677
@@ -1305,6 +1309,7 @@ MonoBehaviour:
   healthbar: {fileID: 0}
   explosionType: 0
   coinType: 0
+  damage: 50
   healthBar: {fileID: 2094380883895585097}
   currentHealthBar: {fileID: 686962894794474695}
 --- !u!1 &4852596653078448469
@@ -1967,6 +1972,7 @@ MonoBehaviour:
   healthbar: {fileID: 0}
   explosionType: 0
   coinType: 0
+  damage: 50
   healthBar: {fileID: 4556883228587924400}
   currentHealthBar: {fileID: 3145030323835065918}
 --- !u!1 &4852596653565179404
@@ -2137,6 +2143,7 @@ MonoBehaviour:
   healthbar: {fileID: 0}
   explosionType: 0
   coinType: 0
+  damage: 50
   healthBar: {fileID: 6079556668939096920}
   currentHealthBar: {fileID: 4667635603592355542}
 --- !u!1 &4852596653577130624
@@ -2325,6 +2332,7 @@ MonoBehaviour:
   healthbar: {fileID: 0}
   explosionType: 0
   coinType: 0
+  damage: 50
   healthBar: {fileID: 7277442602329428873}
   currentHealthBar: {fileID: 8099304126699904519}
 --- !u!1 &4852596653770011128
@@ -2552,11 +2560,11 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   angleMin: -60
   angleMax: -10
-  _listFirePoint:
-  - {fileID: 4817769927400971678}
-  wait_time: 1
   direction: {x: 0, y: 0, z: 0}
   angle: 0
+  _listFirePoint:
+  - {fileID: 4817769927400971678}
+  wait_time: 3
 --- !u!50 &921078690215084912
 Rigidbody2D:
   serializedVersion: 4
@@ -2635,6 +2643,7 @@ MonoBehaviour:
   healthbar: {fileID: 0}
   explosionType: 0
   coinType: 0
+  damage: 50
   healthBar: {fileID: 170513086356507509}
   currentHealthBar: {fileID: 1640966069067417339}
 --- !u!1 &4852596653884199430
@@ -2790,6 +2799,7 @@ MonoBehaviour:
   healthbar: {fileID: 0}
   explosionType: 0
   coinType: 0
+  damage: 50
   healthBar: {fileID: 2331498544272196956}
   currentHealthBar: {fileID: 3801896662536882386}
 --- !u!1 &4852596654002455460
@@ -3040,10 +3050,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b2c5fa1eb2f66140a8bcb96d641f5c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 700
   healthbar: {fileID: 0}
   explosionType: 0
   coinType: 0
+  damage: 50
   healthBar: {fileID: 4926463158671415610}
   currentHealthBar: {fileID: 5820473062940136628}
 --- !u!1 &4852596654057685809
@@ -3214,6 +3225,7 @@ MonoBehaviour:
   healthbar: {fileID: 0}
   explosionType: 0
   coinType: 0
+  damage: 50
   healthBar: {fileID: 8694334942313885016}
   currentHealthBar: {fileID: 7795822066066579670}
 --- !u!1 &4852596654097530281
@@ -3384,6 +3396,7 @@ MonoBehaviour:
   healthbar: {fileID: 0}
   explosionType: 0
   coinType: 0
+  damage: 50
   healthBar: {fileID: 5429081496509122102}
   currentHealthBar: {fileID: 6903967200235539384}
 --- !u!1 &4852596654129898667
@@ -3755,6 +3768,7 @@ MonoBehaviour:
   healthbar: {fileID: 0}
   explosionType: 0
   coinType: 0
+  damage: 50
   healthBar: {fileID: 7205496012301980895}
   currentHealthBar: {fileID: 8603908559436945745}
 --- !u!1 &4852596654394902399
@@ -4914,7 +4928,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d07dbffea5377c43a9b87ca49c0a551, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 50
+  damage: 30
 --- !u!1001 &4991717554418961319
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5110,7 +5124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d07dbffea5377c43a9b87ca49c0a551, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 50
+  damage: 30
 --- !u!1001 &6081601013534349366
 PrefabInstance:
   m_ObjectHideFlags: 0

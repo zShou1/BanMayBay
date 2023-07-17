@@ -6,13 +6,13 @@ public class ActiveBossHealth : MonoBehaviour
 {
     [SerializeField]
     private List<GameObject> _listGameObject;
-    // Start is called before the first frame update
+
     void Awake()
     {
         gameObject.GetComponent<Collider2D>().enabled = false;
     }
 
-    // Update is called once per frame
+//Tao 1 list quan ly cac sung Boss, khi sung bi tieu diet thi xoa di, khi list rong thi active collider
     void Update()
     {
         for(int i = _listGameObject.Count-1; i >=0; i--)

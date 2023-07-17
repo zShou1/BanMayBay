@@ -7,4 +7,5 @@ public enum EnemyType
     MediumEnemy,
     mEnemy3,
     Boss,
+    Enemy2,
 }

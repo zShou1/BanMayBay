@@ -13,7 +13,7 @@ public class Wing2 : MonoBehaviour
     private void Awake()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
-        //gameObject.SetActive(false);
+        gameObject.SetActive(false);
     }
 
     public void ActivateWing2()
@@ -37,6 +37,7 @@ public class Wing2 : MonoBehaviour
         if (player.CompareTag("Player"))
         {
             player.GetComponent<HealthPlayer>().DecreaHealth(damage);
+            gameObject.SetActive(false);
         }
     }
 }

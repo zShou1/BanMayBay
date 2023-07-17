@@ -5,6 +5,7 @@ MonoImporter:
   serializedVersion: 2
   defaultReferences:
   - levelTable: {fileID: 11400000, guid: 9f6b48473af3f8d479ace723e2768757, type: 2}
+  - winUI: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

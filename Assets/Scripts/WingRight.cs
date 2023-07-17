@@ -9,11 +9,6 @@ public class WingRight : MonoBehaviour
 
     public Vector3 _lastPos;
     private float fire_rate_weapon = 4.0f;
-    //BT
-    private void Awake()
-    {
-    }
-
 
     private IEnumerator spawnWingBullet1()
     {
@@ -26,7 +21,6 @@ public class WingRight : MonoBehaviour
 
         yield return null;
     }
-
 
     private IEnumerator StartFire1()
     {
@@ -47,6 +41,5 @@ public class WingRight : MonoBehaviour
         StartCoroutine(StartFire1());
 
     }
-
-
+    
 }

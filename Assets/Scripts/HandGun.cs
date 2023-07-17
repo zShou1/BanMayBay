@@ -5,13 +5,14 @@ using DG.Tweening;
 
 public class HandGun : MonoBehaviour
 {
+    //Class nay su dung de Xoay HandGun va phun lua
     [SerializeField]
     private List<Transform> _listFirePoint;
 
     [SerializeField]
     private List<ParticleSystem> _listFirePointEffect;
 
-    private float fire_rate_weapon = 5f;
+    private float fire_rate_weapon = 14f;
     public float minAngle;
     public float maxAngle;
     public float waitTime;
@@ -41,7 +42,7 @@ public class HandGun : MonoBehaviour
             transform.DORotate(new Vector3(0, 0, minAngle), 1.5f);
             yield return new WaitForSeconds(1.5f);
             StartCoroutine(spawnFire());
-            yield return new WaitForSeconds(14f);
+            yield return new WaitForSeconds(fire_rate_weapon);
         }
         
     }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,9 +7,9 @@ public class Wing1 : MonoBehaviour
 {
     private Rigidbody2D _rigidbody2D;
     private int damage = 50;
-    public float speed = 5.0f;
+    public float speed = 15.0f;
     public float currentSpeed;
-    float deltaSpeed;
+    private float deltaSpeed=1.5f;
     public float minSpeed = 0.1f;
     Vector3 _lastPos;
 
@@ -24,7 +25,7 @@ public class Wing1 : MonoBehaviour
     {
         currentSpeed = speed;
 
-        _rigidbody2D.velocity = -transform.up * currentSpeed;
+        /*_rigidbody2D.velocity = -transform.up * currentSpeed;*/
         
     }
     private IEnumerator spawnWingBullet2()
@@ -42,24 +43,18 @@ public class Wing1 : MonoBehaviour
         Transform bullet4 = ObjectPutter.Instance.PutObject(SpawnerType.WingBullet2);
         bullet4.position = _lastPos;
         bullet4.rotation = Quaternion.Euler(0f, 0f, -270f);
-
-
+        
         bullet1.GetComponent<Wing2>().ActivateWing2();
         bullet2.GetComponent<Wing2>().ActivateWing2();
         bullet3.GetComponent<Wing2>().ActivateWing2();
         bullet4.GetComponent<Wing2>().ActivateWing2();
-
-
-
-
+        
         yield return null;
     }
     private IEnumerator StartFire()
     {
         yield return StartCoroutine(spawnWingBullet2());
-
-
-
+        
     }
 
 
@@ -68,10 +63,9 @@ public class Wing1 : MonoBehaviour
         
         StartCoroutine(StartFire());
         gameObject.SetActive(false);
-
         
     }    
-    private void Update()
+/*    private void Update()
     {
         deltaSpeed = 1.0f;
 
@@ -83,12 +77,26 @@ public class Wing1 : MonoBehaviour
             _lastPos = gameObject.transform.position;
             DeActivate();  
         }
+    }*/
+
+    private void FixedUpdate()
+    {
+        _rigidbody2D.velocity = -transform.up * currentSpeed*3f;
+        currentSpeed -= Time.fixedDeltaTime*1.5f;
+        if (currentSpeed <= 0)
+        {
+            _rigidbody2D.velocity= Vector2.zero;
+            _lastPos = gameObject.transform.position;
+            DeActivate();
+        }
     }
+
     private void OnTriggerEnter2D(Collider2D player)
     {
         if (player.CompareTag("Player"))
         {
             player.GetComponent<HealthPlayer>().DecreaHealth(damage);
+            gameObject.SetActive(false);
         }
     }
 }

@@ -17,10 +17,6 @@ public class ActiveAnimation : MonoBehaviour
     public GameObject handGunLeft;
     public GameObject handGunRight;
 
-
-
-
-    // Start is called before the first frame update
     private void Awake()
     {
         bossAnim = gameObject.GetComponent<Animation>();
@@ -38,8 +34,7 @@ public class ActiveAnimation : MonoBehaviour
         handGunRight.GetComponent<Collider2D>().enabled = false;
         gameObject.GetComponent<ActiveBossHealth>().enabled = false;
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
         if(wingLeft.active==false && wingRight.active == false)

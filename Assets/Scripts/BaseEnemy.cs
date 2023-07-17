@@ -1,6 +1,8 @@
 using DG.Tweening;
 using UnityEngine;
 using System;
+using Random = UnityEngine.Random;
+
 public class BaseEnemy : HealthManager
 {
     private DOTweenPath mainPath;
@@ -11,7 +13,7 @@ public class BaseEnemy : HealthManager
 
     public ExplosionEffectType explosionType;
     public coinType coinType;
-    private int damage=50;
+    public int damage=50;
 
     public void Init(DOTweenPath _mainPath, DOTweenPath _additionPath, bool _isRotateToPath)
     {
@@ -21,7 +23,7 @@ public class BaseEnemy : HealthManager
         isRotateToPath = _isRotateToPath;
         StartMove();
     }
-
+//Tao path di chuyen
     public virtual void StartMove()
     {
         if (isRotateToPath)
@@ -86,7 +88,7 @@ public class BaseEnemy : HealthManager
         OnDeActivate();
     }
 
-
+//Func xu ly Health khi nhan Damage tu Player Bullet
     public override void DecreaHealth(int bulletDamage)
     {
         currentHealth -= bulletDamage;
@@ -111,27 +113,35 @@ public class BaseEnemy : HealthManager
         }
     }
     private Rigidbody2D cl;
+    
     void SpawnCoin()
     {
-
         var coinType = this.coinType;
-        Transform coin = null;
+        /*Transform coin = null;*/
         switch (coinType)
         {
             case coinType.smallCoin:
-                coin = ObjectPutter.Instance.PutObject(SpawnerType.smallCoin);
+                Transform coin = ObjectPutter.Instance.PutObject(SpawnerType.smallCoin);
+                coin.transform.position = transform.position;
+                Rigidbody2D rbCoin = coin.GetComponent<Rigidbody2D>();
+                rbCoin.AddForce(new Vector2(Random.Range(-1.5f,1.5f), Random.Range(2f,3f)), ForceMode2D.Impulse);
                 break;
             case coinType.bigCoin:
-                coin = ObjectPutter.Instance.PutObject(SpawnerType.bigCoin);
-                coin = ObjectPutter.Instance.PutObject(SpawnerType.smallCoin);
-                coin = ObjectPutter.Instance.PutObject(SpawnerType.smallCoin);
+                Transform coin1 = ObjectPutter.Instance.PutObject(SpawnerType.bigCoin);
+                Transform coin2 = ObjectPutter.Instance.PutObject(SpawnerType.smallCoin);
+                Transform coin3 = ObjectPutter.Instance.PutObject(SpawnerType.smallCoin);
+                coin1.transform.position = transform.position;
+                coin2.transform.position = transform.position;
+                coin3.transform.position = transform.position;
+                Rigidbody2D rbCoin1 = coin1.GetComponent<Rigidbody2D>();
+                rbCoin1.AddForce(new Vector2(Random.Range(-1.5f,1.5f), Random.Range(2f,3f)), ForceMode2D.Impulse);
+                Rigidbody2D rbCoin2 = coin2.GetComponent<Rigidbody2D>();
+                rbCoin2.AddForce(new Vector2(Random.Range(-1.5f,1.5f), Random.Range(2f,3f)), ForceMode2D.Impulse);
+                Rigidbody2D rbCoin3 = coin3.GetComponent<Rigidbody2D>();
+                rbCoin3.AddForce(new Vector2(Random.Range(-1.5f,1.5f), Random.Range(2f,3f)), ForceMode2D.Impulse);
                 break;
-                if (cl.CompareTag("Coin"))
-                {
-                    cl.AddForce(new Vector3(0.25f, 0.01f, 0), ForceMode2D.Impulse);
-                }
         }
-        coin.position = transform.position;
+        /*coin.position = transform.position;*/
         
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -140,12 +150,14 @@ public class BaseEnemy : HealthManager
         if (collision.CompareTag("Player"))
         {
             collision.GetComponent<HealthPlayer>().DecreaHealth(damage);
+            Transform explosion =
+            ObjectPutter.Instance.PutObject(SpawnerType.SmallExplosion);
+            explosion.position = transform.position;
+            DeActivate();
+            Reset();
         }
     }
-    /*private void OnTriggerEnter2D(Collider2D player)
-    {
-        
-    }*/
+
     public void Reset()
 {
     currentHealth = health;

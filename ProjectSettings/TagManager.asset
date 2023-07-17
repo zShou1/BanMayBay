@@ -19,6 +19,7 @@ TagManager:
   - handgun
   - Boss
   - Wing1
+  - MediumEnemy
   layers:
   - Default
   - TransparentFX

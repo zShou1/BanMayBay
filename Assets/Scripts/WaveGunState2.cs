@@ -10,10 +10,7 @@ public class WaveGunState2 : MonoBehaviour
     private List<Transform> _listFirePoint;
 
     private float fire_rate_weapon = 4.0f;
-
     
-
-
     private IEnumerator SpawnWaveBullet2()
     {
         Transform bullet1 = ObjectPutter.Instance.PutObject(SpawnerType.WaveBullet2);
@@ -25,12 +22,10 @@ public class WaveGunState2 : MonoBehaviour
 
         yield return null;
     }
-
-
-    //private float time = 0;
+    
     private IEnumerator StartFire()
     {
-        //Gia tri cho luc dau
+
         yield return new WaitForSeconds(waitTime);
 
         while (true)
@@ -55,9 +50,5 @@ public class WaveGunState2 : MonoBehaviour
             gameObject.SetActive(false);
         }
     }
-    /*    private void OnEnable()
-        {
-            StartCoroutine(StartFire());
 
-        }*/
 }

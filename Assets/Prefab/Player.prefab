@@ -43,7 +43,6 @@ GameObject:
   - component: {fileID: 1498580844160155184}
   - component: {fileID: 1498580844160155187}
   - component: {fileID: 1498580844160155198}
-  - component: {fileID: 1498580844160155199}
   - component: {fileID: 1498580844160155196}
   m_Layer: 0
   m_Name: Player
@@ -118,18 +117,6 @@ MonoBehaviour:
   healthbar: {fileID: 0}
   healthBar: {fileID: 0}
   currentHealthBar: {fileID: 0}
---- !u!114 &1498580844160155199
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1498580844160155189}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2a70dd09c950f94cab0d0e9da1a3946, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &1498580844160155196
 BoxCollider2D:
   m_ObjectHideFlags: 0

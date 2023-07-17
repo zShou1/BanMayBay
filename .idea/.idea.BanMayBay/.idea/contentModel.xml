@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\DBinh\ProjectUnity\BanMayBay" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Animation" t="Include" />
+        <e p="Images" t="Include">
+          <e p="Boss" t="Include" />
+          <e p="Enemy" t="Include" />
+          <e p="Gold" t="Include" />
+          <e p="Ship" t="Include" />
+        </e>
+        <e p="Materials" t="Include" />
+        <e p="Plugins" t="Include">
+          <e p="Demigiant" t="Include">
+            <e p="DemiLib" t="Include">
+              <e p="Core" t="Include">
+                <e p="DemiLib.xml" t="Include" />
+                <e p="Editor" t="Include">
+                  <e p="DemiEditor.xml" t="Include" />
+                  <e p="Imgs" t="Include">
+                    <e p="project" t="Include" />
+                  </e>
+                </e>
+              </e>
+            </e>
+            <e p="DOTween" t="Include">
+              <e p="Editor" t="Include">
+                <e p="Imgs" t="Include" />
+              </e>
+              <e p="Modules" t="Include">
+                <e p="DOTweenModuleAudio.cs" t="Include" />
+                <e p="DOTweenModuleEPOOutline.cs" t="Include" />
+                <e p="DOTweenModulePhysics.cs" t="Include" />
+                <e p="DOTweenModulePhysics2D.cs" t="Include" />
+                <e p="DOTweenModuleSprite.cs" t="Include" />
+                <e p="DOTweenModuleUI.cs" t="Include" />
+                <e p="DOTweenModuleUnityVersion.cs" t="Include" />
+                <e p="DOTweenModuleUtils.cs" t="Include" />
+              </e>
+              <e p="readme.txt" t="Include" />
+            </e>
+            <e p="DOTweenPro" t="Include">
+              <e p="DOTweenAnimation.cs" t="Include" />
+              <e p="DOTweenDeAudio.cs" t="Include" />
+              <e p="DOTweenDeUnityExtended.cs" t="Include" />
+              <e p="DOTweenProShortcuts.cs" t="Include" />
+              <e p="DOTweenTextMeshPro.cs" t="Include" />
+              <e p="DOTweenTk2d.cs" t="Include" />
+              <e p="Editor" t="Include">
+                <e p="DOTweenAnimationInspector.cs" t="Include" />
+                <e p="DOTweenPreviewManager.cs" t="Include" />
+              </e>
+              <e p="readme.txt" t="Include" />
+            </e>
+            <e p="DOTweenPro Examples" t="Include">
+              <e p="Examples Assets" t="Include" />
+            </e>
+            <e p="readme_DOTweenPro.txt" t="Include" />
+          </e>
+        </e>
+        <e p="PNG" t="Include">
+          <e p="Accept" t="Include" />
+          <e p="Buttons" t="Include">
+            <e p="BTNs" t="Include" />
+            <e p="BTNs_Active" t="Include" />
+          </e>
+          <e p="Clouds" t="Include" />
+          <e p="Hangar" t="Include" />
+          <e p="Level_Menu" t="Include" />
+          <e p="Loading_Bar" t="Include" />
+          <e p="Main_Menu" t="Include" />
+          <e p="Main_UI" t="Include" />
+          <e p="Pause" t="Include" />
+          <e p="Rating" t="Include" />
+          <e p="Setting" t="Include" />
+          <e p="Ship_Parts" t="Include" />
+          <e p="Ship_Shop" t="Include" />
+          <e p="Shop" t="Include" />
+          <e p="Upgrade" t="Include" />
+          <e p="You_Lose" t="Include" />
+          <e p="You_Win" t="Include" />
+        </e>
+        <e p="Prefab" t="Include" />
+        <e p="Prefabs" t="Include">
+          <e p="Boss1" t="Include" />
+          <e p="OrbitPath" t="Include">
+            <e p="Level1" t="Include" />
+          </e>
+          <e p="ParticleSystem" t="Include" />
+          <e p="Resources" t="Include" />
+        </e>
+        <e p="Resources" t="Include" />
+        <e p="Scenes" t="Include" />
+        <e p="Scripts" t="Include">
+          <e p="ActiveAnimation.cs" t="Include" />
+          <e p="ActiveBossHealth.cs" t="Include" />
+          <e p="BaseEnemy.cs" t="Include" />
+          <e p="BossHealth.cs" t="Include" />
+          <e p="Boundary.cs" t="Include" />
+          <e p="Bullet.cs" t="Include" />
+          <e p="Coin.cs" t="Include" />
+          <e p="coinType.cs" t="Include" />
+          <e p="DeActiveHandGun.cs" t="Include" />
+          <e p="EnemyType.cs" t="Include" />
+          <e p="ExplosionEffectType.cs" t="Include" />
+          <e p="FireTrigger.cs" t="Include" />
+          <e p="HandGun.cs" t="Include" />
+          <e p="HandGunHealth.cs" t="Include" />
+          <e p="HealthManager.cs" t="Include" />
+          <e p="HealthPlayer.cs" t="Include" />
+          <e p="LevelManager.cs" t="Include" />
+          <e p="LevelTable.cs" t="Include" />
+          <e p="MainCamera.cs" t="Include" />
+          <e p="MainMenu.cs" t="Include" />
+          <e p="MediumBullet.cs" t="Include" />
+          <e p="MediumEnemy.cs" t="Include" />
+          <e p="MediumFire.cs" t="Include" />
+          <e p="mEnemy3Bullet.cs" t="Include" />
+          <e p="mEnemy3Fire.cs" t="Include" />
+          <e p="MiniBullet.cs" t="Include" />
+          <e p="MiniGun.cs" t="Include" />
+          <e p="MiniGunLeft.cs" t="Include" />
+          <e p="MiniGunRight.cs" t="Include" />
+          <e p="ObjectPutter.cs" t="Include" />
+          <e p="Orbit.cs" t="Include" />
+          <e p="PlayerTouchControl.cs" t="Include" />
+          <e p="RepeatingBackground.cs" t="Include" />
+          <e p="RotateMedium.cs" t="Include" />
+          <e p="RotateToPlayer.cs" t="Include" />
+          <e p="ScrollingObject.cs" t="Include" />
+          <e p="ShipWeapon.cs" t="Include" />
+          <e p="SpawnCoin.cs" t="Include" />
+          <e p="Spawner.cs" t="Include" />
+          <e p="SpawnerInfo.cs" t="Include" />
+          <e p="SpawnerTable.cs" t="Include" />
+          <e p="SpawnerType.cs" t="Include" />
+          <e p="UIControl.cs" t="Include" />
+          <e p="WaveBullet.cs" t="Include" />
+          <e p="WaveBullet2.cs" t="Include" />
+          <e p="WaveGunHealth.cs" t="Include" />
+          <e p="WaveGunState1.cs" t="Include" />
+          <e p="WaveGunState2.cs" t="Include" />
+          <e p="Wing1.cs" t="Include" />
+          <e p="Wing2.cs" t="Include" />
+          <e p="WingGun.cs" t="Include" />
+          <e p="WingLeft.cs" t="Include" />
+          <e p="WingRight.cs" t="Include" />
+        </e>
+        <e p="Sounds" t="Include" />
+        <e p="TextMesh Pro" t="Include">
+          <e p="Documentation" t="Include" />
+          <e p="Fonts" t="Include">
+            <e p="LiberationSans - OFL.txt" t="Include" />
+          </e>
+          <e p="Resources" t="Include">
+            <e p="Fonts &amp; Materials" t="Include" />
+            <e p="LineBreaking Following Characters.txt" t="Include" />
+            <e p="LineBreaking Leading Characters.txt" t="Include" />
+            <e p="Sprite Assets" t="Include" />
+            <e p="Style Sheets" t="Include" />
+          </e>
+          <e p="Shaders" t="Include">
+            <e p="TMP_Bitmap-Custom-Atlas.shader" t="Include" />
+            <e p="TMP_Bitmap-Mobile.shader" t="Include" />
+            <e p="TMP_Bitmap.shader" t="Include" />
+            <e p="TMP_SDF Overlay.shader" t="Include" />
+            <e p="TMP_SDF SSD.shader" t="Include" />
+            <e p="TMP_SDF-Mobile Masking.shader" t="Include" />
+            <e p="TMP_SDF-Mobile Overlay.shader" t="Include" />
+            <e p="TMP_SDF-Mobile SSD.shader" t="Include" />
+            <e p="TMP_SDF-Mobile.shader" t="Include" />
+            <e p="TMP_SDF-Surface-Mobile.shader" t="Include" />
+            <e p="TMP_SDF-Surface.shader" t="Include" />
+            <e p="TMP_SDF.shader" t="Include" />
+            <e p="TMP_Sprite.shader" t="Include" />
+            <e p="TMPro.cginc" t="Include" />
+            <e p="TMPro_Mobile.cginc" t="Include" />
+            <e p="TMPro_Properties.cginc" t="Include" />
+            <e p="TMPro_Surface.cginc" t="Include" />
+          </e>
+          <e p="Sprites" t="Include">
+            <e p="EmojiOne Attribution.txt" t="Include" />
+            <e p="EmojiOne.json" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="BanMayBay.sln" t="IncludeFlat" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\Bin" t="ExcludeRecursive" />
+    </e>
+    <e p="C:\Users\PC\.Rider2019.1\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\PC\.Rider2019.1\system\resharper-host\local\Transient\ReSharperHost\v191\SolutionCaches\_BanMayBay.1406744508.00" t="ExcludeRecursive" />
+  </component>
+</project>

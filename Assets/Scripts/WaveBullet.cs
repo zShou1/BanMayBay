@@ -16,7 +16,7 @@ public class WaveBullet : MonoBehaviour
         transform.DOScale(new Vector3(2, 0.6f, 0), 4.15f).SetLoops(-1);
         gameObject.SetActive(false);
 
-        //transform.rotation= Quaternion.Euler(0f, 0f, -90f);
+/*        transform.rotation= Quaternion.Euler(0f, 0f, -90f);*/
     }
 
     public void Activate()
@@ -37,6 +37,7 @@ public class WaveBullet : MonoBehaviour
         if (player.CompareTag("Player"))
         {
             player.GetComponent<HealthPlayer>().DecreaHealth(damage);
+            /*gameObject.SetActive(false);*/
         }
     }
 

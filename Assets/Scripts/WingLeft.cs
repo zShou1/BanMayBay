@@ -6,28 +6,20 @@ public class WingLeft : MonoBehaviour
 {
     [SerializeField]
     private List<Transform> _listFirePoint;
-
-
+    
     private float fire_rate_weapon = 4.0f;
-    //BT
-
-    private void Awake()
-    {
-    }
-
-
+    
     private IEnumerator spawnWingBullet1()
     {
-        Transform fire1 = ObjectPutter.Instance.PutObject(SpawnerType.WingBullet1);
-        fire1.position = _listFirePoint[0].position;
-        fire1.rotation = Quaternion.Euler(0f, 0f, 5.0f);
+        Transform fire = ObjectPutter.Instance.PutObject(SpawnerType.WingBullet1);
+        fire.position = _listFirePoint[0].position;
+        fire.rotation = Quaternion.Euler(0f, 0f, 5.0f);
 
 
-        fire1.GetComponent<Wing1>().ActivateWing1();
+        fire.GetComponent<Wing1>().ActivateWing1();
 
         yield return null;
     }
-
 
     private IEnumerator StartFire1()
     {
@@ -42,9 +34,7 @@ public class WingLeft : MonoBehaviour
         }
         yield return null;
     }
-
-
-
+    
     private void OnEnable()
     {
         StartCoroutine(StartFire1());

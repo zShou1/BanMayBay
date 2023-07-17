@@ -30,9 +30,8 @@ public class HealthPlayer : HealthManager
             DeActivate();
             Transform explosion =
             ObjectPutter.Instance.PutObject(SpawnerType.ExplosionPlayer);
-            explosion.position = transform.position;
-
-            Reset();
+            explosion.position = transform.position;            
+            Reset();  
         }
     }
 

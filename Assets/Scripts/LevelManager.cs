@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using System.Linq;
 
 public class LevelManager : MonoBehaviour
 {
@@ -8,23 +9,35 @@ public class LevelManager : MonoBehaviour
 
     private int currentEnemyDestroy;
 
+    public GameObject winUI;
+
     private void Start()
     {
         StartCoroutine(CreateLevel());
+        PlayerPrefs.SetInt("totalWave", levelTable.waveList.Count);
     }
 
     public IEnumerator CreateLevel()
     {
         for (int i = 0; i < levelTable.waveList.Count; i++)
         {
+            PlayerPrefs.SetInt("currentWave", i+1);
             currentEnemyDestroy = 0;
             LevelTable.Wave wave = levelTable.waveList[i];
             for (int j = 0; j < wave.orbitList.Count; j++)
             {
                 StartCoroutine(SpawnEnemyOrbit(wave.orbitList[j]));
             }
-
+            
             yield return new WaitUntil(() => (currentEnemyDestroy == wave.TotalEnemy));
+            yield return null;
+            if (i == levelTable.waveList.Count-1)
+            {
+                yield return new WaitForSeconds(2f);
+                Time.timeScale = 0f;
+                winUI.SetActive(true);
+            }
+
         }
     }
 
@@ -48,6 +61,9 @@ public class LevelManager : MonoBehaviour
                 case EnemyType.Boss:
                     enemy = ObjectPutter.Instance.PutObject(SpawnerType.Boss);
                     break;
+                case EnemyType.Enemy2:
+                    enemy = ObjectPutter.Instance.PutObject(SpawnerType.Enemy2);
+                    break;
             }
 
             BaseEnemy baseEnemy = enemy.GetComponent<BaseEnemy>();
@@ -61,5 +77,6 @@ public class LevelManager : MonoBehaviour
     {
         currentEnemyDestroy++;
     }
+
 
 }

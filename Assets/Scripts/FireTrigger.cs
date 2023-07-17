@@ -6,6 +6,7 @@ public class FireTrigger : MonoBehaviour
 {
     public int damage = 50;
     GameObject player;
+    //Xu ly va cham voi Particle Trigger Module
     private void Awake()
     {
         player = GameObject.FindWithTag("Player");

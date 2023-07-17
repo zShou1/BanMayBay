@@ -11,6 +11,7 @@ public class MediumFire : MonoBehaviour
     private float fire_rate_weapon = 1.0f;
     //BT
 
+    //Turn dau ban 2 luot, moi luot 4 vien
     private IEnumerator SpawnBullet()
     {
         Transform bullet1 = ObjectPutter.Instance.PutObject(SpawnerType.MediumBullet);
@@ -30,9 +31,10 @@ public class MediumFire : MonoBehaviour
         bullet2.GetComponent<MediumBullet>().Activate();
         bullet3.GetComponent<MediumBullet>().Activate();
         bullet4.GetComponent<MediumBullet>().Activate();
-
         yield return null;
     }
+    
+    //Turn 2 ban 2 luot, moi luot 5 vien
     private IEnumerator SpawnBullet2()
     {
         Transform bullet1 = ObjectPutter.Instance.PutObject(SpawnerType.MediumBullet);
@@ -59,12 +61,10 @@ public class MediumFire : MonoBehaviour
         yield return null;
     }
 
-    private float time = 0;
+
     private IEnumerator StartFire()
     {
-        //Gia tri cho luc dau
-        yield return new WaitForSeconds(0.5f);
-
+        yield return new WaitForSeconds(1.0f);
         while (true)
         {
             StartCoroutine(SpawnBullet());
@@ -75,15 +75,8 @@ public class MediumFire : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
             StartCoroutine(SpawnBullet2());
             yield return new WaitForSeconds(fire_rate_weapon);
-            time += 1.0f;
-            if (time == 3.0f)
-            {
-                break;
-                yield break;
-            }
         }
     }
-
     private void OnEnable()
     {
         StartCoroutine(StartFire());

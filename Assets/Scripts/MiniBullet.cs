@@ -6,74 +6,64 @@ using DG.Tweening;
 
 public class MiniBullet : MonoBehaviour
 {
+    //Dan Minigun
     private Rigidbody2D _rigidbody2D;
-    float speed = 4.0f;
+    float speed = 7.0f;
     private int damage = 20;
     float xRan ;
     float yRan ;
-    Vector3 _pos;
     public Transform playerTransform;
     public Vector2 direction;
     public Vector3 pointMove;
-    public float angle;
     float rotateSpeed = 200f;
+    private bool isFollow;
 
     private void Awake()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
+        isFollow = false;
         gameObject.SetActive(false);
 
         playerTransform = GameObject.FindWithTag("Player").transform;
+        //Dan bay ra voi khoang cach ngau nhien
         xRan = Random.Range(1.0f, 2.0f);
         yRan = Random.Range(1.0f, 2.0f);
     }
 
-    public void ActivateWing2()
+    public IEnumerator ActivateMini()
     {
-        pointMove = _pos = transform.position + new Vector3(-xRan, -yRan, 0);
-        angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        //Active dan Mini ben trai
+        pointMove = transform.position + new Vector3(-xRan, -yRan, 0);
         transform.DOMove(pointMove, 0.5f);
-        StartCoroutine(wait());
+        yield return new WaitForSeconds(0.5f);
+        FireToPlayer();
+/*        StartCoroutine(Move2());*/
 
     }
-    public void ActivateWing()
+    public IEnumerator ActivateMini2()
     {
-        pointMove = _pos = transform.position + new Vector3(xRan, -yRan, 0);
-        angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        //Active dan Mini ben phai
+        pointMove =  transform.position + new Vector3(xRan, -yRan, 0);
         transform.DOMove(pointMove, 0.5f);
-        StartCoroutine(wait());
+        yield return new WaitForSeconds(0.5f);
+        FireToPlayer();
+/*        StartCoroutine(Move2());*/
+    }
 
-    }
-    public IEnumerator wait()
+    void FireToPlayer()
     {
-        yield return new WaitForSeconds(5f);
-        gameObject.SetActive(false);
-    }
-    public void Update()
-    {
-        _pos = transform.position;
         direction = (Vector2)playerTransform.position - _rigidbody2D.position;
         direction.Normalize();
-
-        float rotateAmount = Vector3.Cross(direction, -transform.up).z;
-        _rigidbody2D.angularVelocity = -rotateAmount * rotateSpeed;
-        _rigidbody2D.velocity = -transform.up * speed;
-
-
-
-        IEnumerator Move2()
-        {
-            yield return new WaitForSeconds(1.0f);
-            _rigidbody2D.angularVelocity = 0;
-        }
-        StartCoroutine(Move2());
+        _rigidbody2D.velocity = direction * speed;
     }
+
 
     private void OnTriggerEnter2D(Collider2D player)
     {
         if (player.CompareTag("Player"))
         {
             player.GetComponent<HealthPlayer>().DecreaHealth(damage);
+            gameObject.SetActive(false);
         }
     }
 }

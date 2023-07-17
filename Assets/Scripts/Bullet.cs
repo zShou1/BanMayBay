@@ -20,6 +20,7 @@ public class Bullet : MonoBehaviour
         _rigidbody2D.velocity = transform.up * speed;
     }
 
+    //Xu ly va cham, khi Bullet ban vao cac muc tieu se tru Health, tao hieu ung roi DeActive
     private void OnTriggerEnter2D(Collider2D enemy)
     {
         if (enemy.CompareTag("Enemy"))

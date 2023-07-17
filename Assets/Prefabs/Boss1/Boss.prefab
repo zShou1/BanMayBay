@@ -2899,6 +2899,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Black
       objectReference: {fileID: 0}
+    - target: {fileID: 835419199722701727, guid: ef8d4ba21ef93ac4ab4131f4d624275a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3427877747248902348, guid: ef8d4ba21ef93ac4ab4131f4d624275a, type: 3}
       propertyPath: m_SortingOrder
       value: 22

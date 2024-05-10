@@ -47,9 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7d89a11ea62ff8429ac0594ece9ab33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 15
-  _audio: {fileID: 6597416684109455774, guid: c55b5e474c091604c8a3613b676d2255, type: 3}
-  _clip: {fileID: 8300000, guid: 2d9daee389b04e1eb765d5f55bf7762d, type: 3}
+  damage: 7
 --- !u!50 &1687201301658759175
 Rigidbody2D:
   serializedVersion: 4

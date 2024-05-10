@@ -20,6 +20,7 @@ TagManager:
   - Boss
   - Wing1
   - MediumEnemy
+  - SupportShipBullet
   layers:
   - Default
   - TransparentFX
@@ -32,7 +33,7 @@ TagManager:
   - PlayerBullet
   - Enemy
   - Player
-  - 
+  - SupportShipBullet
   - 
   - 
   - 

@@ -276,7 +276,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fd22e9db60eeac43841b37aa2c281f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 2000
+  health: 1600
   healthbar: {fileID: 0}
   explosionType: 1
   coinType: 1

@@ -11,11 +11,16 @@ public class MainMenu : MonoBehaviour
     
     [SerializeField]
     private GameObject hdUI;
-    
+
+    [SerializeField] private GameObject HighScorePanel;
+
+    [SerializeField] private GameObject settingPanel;
     private void Awake()
     {
         exitUI.SetActive(false);
         hdUI.SetActive(false);
+        HighScorePanel.SetActive(false);
+        settingPanel.SetActive(false);
     }
 
     public void ExitButton()
@@ -51,5 +56,15 @@ public class MainMenu : MonoBehaviour
     public void NoBTN()
     {
         exitUI.SetActive(false);
+    }
+
+    public void HighScoreBTN()
+    {
+        HighScorePanel.SetActive(true);
+    }
+
+    public void SettingBTN()
+    {
+        settingPanel.SetActive(true);
     }
 }

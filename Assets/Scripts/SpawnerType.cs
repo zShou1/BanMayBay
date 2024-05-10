@@ -24,4 +24,5 @@ public enum SpawnerType
     WaveBullet2,
     FireBullet,
     Enemy2,
+    SupportShipBullet,
 }

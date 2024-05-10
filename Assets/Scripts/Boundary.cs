@@ -9,5 +9,9 @@ public class Boundary : MonoBehaviour
         {
             other.gameObject.SetActive(false);
         }
+        if (other.CompareTag("SupportShipBullet"))
+        {
+            other.gameObject.SetActive(false);
+        }
     }
 }

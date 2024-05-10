@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88fa38ee0fbed41418fb4501aa6e42b9, type: 3}
+  m_Name: 2
+  m_EditorClassIdentifier: 
+  waveList:
+  - orbitList:
+    - timeStart: 2
+      timeDelay: 0.5
+      enemyType: 0
+      enemyNum: 5
+      isRotateToPath: 1
+      mainPath: {fileID: 8096846197863220076, guid: a4c17f84a17f63147914e233f7b39c11, type: 3}
+      additionPath: {fileID: 0}
+    - timeStart: 4
+      timeDelay: 0.5
+      enemyType: 0
+      enemyNum: 5
+      isRotateToPath: 1
+      mainPath: {fileID: 6759535956332848471, guid: d42e3da048c3b3b40a62ed893e584b71, type: 3}
+      additionPath: {fileID: 0}
+  - orbitList:
+    - timeStart: 2
+      timeDelay: 0.5
+      enemyType: 4
+      enemyNum: 5
+      isRotateToPath: 1
+      mainPath: {fileID: 4725070222026020067, guid: e984882150d033746abaf81e9ff5a963, type: 3}
+      additionPath: {fileID: 0}
+    - timeStart: 4
+      timeDelay: 0.5
+      enemyType: 4
+      enemyNum: 5
+      isRotateToPath: 1
+      mainPath: {fileID: 6690667108828137970, guid: 1e9c70821ec40e943a603a8dbfd90210, type: 3}
+      additionPath: {fileID: 0}
+  - orbitList:
+    - timeStart: 2
+      timeDelay: 0.5
+      enemyType: 1
+      enemyNum: 1
+      isRotateToPath: 0
+      mainPath: {fileID: 985250383391643805, guid: 28ac6765a8ce458429bc0543b867efea, type: 3}
+      additionPath: {fileID: 2383977884739293859, guid: be8831124ed3d66429b703153ffc7534, type: 3}

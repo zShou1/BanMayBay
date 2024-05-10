@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\DBinh\ProjectUnity\BanMayBay" t="IncludeRecursive">
+    <e p="C:\Users\lyquy\.Rider2019.1\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\lyquy\.Rider2019.1\system\resharper-host\local\Transient\ReSharperHost\v191\SolutionCaches\_BanMayBay.809635925.00" t="ExcludeRecursive" />
+    <e p="D:\Binh\DoAnTotNghiep\BanMayBay" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Animation" t="Include" />
+        <e p="Fonts" t="Include" />
         <e p="Images" t="Include">
           <e p="Boss" t="Include" />
           <e p="Enemy" t="Include" />
@@ -14,6 +17,39 @@
           <e p="Ship" t="Include" />
         </e>
         <e p="Materials" t="Include" />
+        <e p="PlayerPrefsEditor" t="Include">
+          <e p="Documentation" t="Include">
+            <e p="Images" t="Include" />
+          </e>
+          <e p="Editor" t="Include">
+            <e p="Dialogs" t="Include">
+              <e p="TextFieldDialog.cs" t="Include" />
+              <e p="TextValidator.cs" t="Include" />
+            </e>
+            <e p="Extensions" t="Include">
+              <e p="CenterOnWindow.cs" t="Include" />
+            </e>
+            <e p="PreferencesEditor" t="Include">
+              <e p="PreferenceEntry.cs" t="Include" />
+              <e p="PreferenceEntryHolder.cs" t="Include" />
+              <e p="PreferencesEditorWindow.cs" t="Include" />
+              <e p="PreferenceStorageAccessor.cs" t="Include" />
+              <e p="RegistryMonitor.cs" t="Include" />
+            </e>
+            <e p="Styles.cs" t="Include" />
+            <e p="Unity.PlayerPrefsEditor.Editor.asmdef" t="Include" />
+          </e>
+          <e p="Editor Resources" t="Include">
+            <e p="ImageManager.cs" t="Include" />
+            <e p="Unity.PlayerPrefsEditor.EditorResources.asmdef" t="Include" />
+          </e>
+          <e p="Samples" t="Include">
+            <e p="SampleScene" t="Include">
+              <e p="PlayerPrefsController.cs" t="Include" />
+              <e p="Unity.PlayerPrefsEditor.Samples.SampleScene.asmdef" t="Include" />
+            </e>
+          </e>
+        </e>
         <e p="Plugins" t="Include">
           <e p="Demigiant" t="Include">
             <e p="DemiLib" t="Include">
@@ -70,6 +106,7 @@
           </e>
           <e p="Clouds" t="Include" />
           <e p="Hangar" t="Include" />
+          <e p="Laser Sprites" t="Include" />
           <e p="Level_Menu" t="Include" />
           <e p="Loading_Bar" t="Include" />
           <e p="Main_Menu" t="Include" />
@@ -80,6 +117,7 @@
           <e p="Ship_Parts" t="Include" />
           <e p="Ship_Shop" t="Include" />
           <e p="Shop" t="Include" />
+          <e p="UI" t="Include" />
           <e p="Upgrade" t="Include" />
           <e p="You_Lose" t="Include" />
           <e p="You_Win" t="Include" />
@@ -94,61 +132,94 @@
           <e p="Resources" t="Include" />
         </e>
         <e p="Resources" t="Include" />
+        <e p="SaveData.json" t="Include" />
         <e p="Scenes" t="Include" />
         <e p="Scripts" t="Include">
-          <e p="ActiveAnimation.cs" t="Include" />
-          <e p="ActiveBossHealth.cs" t="Include" />
-          <e p="BaseEnemy.cs" t="Include" />
-          <e p="BossHealth.cs" t="Include" />
+          <e p="Boss" t="Include">
+            <e p="ActiveAnimation.cs" t="Include" />
+            <e p="ActiveBossHealth.cs" t="Include" />
+            <e p="BossHealth.cs" t="Include" />
+            <e p="DeActiveHandGun.cs" t="Include" />
+            <e p="FireTrigger.cs" t="Include" />
+            <e p="HandGun.cs" t="Include" />
+            <e p="HandGunHealth.cs" t="Include" />
+            <e p="MiniBullet.cs" t="Include" />
+            <e p="MiniGun.cs" t="Include" />
+            <e p="MiniGunLeft.cs" t="Include" />
+            <e p="MiniGunRight.cs" t="Include" />
+            <e p="WaveBullet.cs" t="Include" />
+            <e p="WaveBullet2.cs" t="Include" />
+            <e p="WaveGunHealth.cs" t="Include" />
+            <e p="WaveGunState1.cs" t="Include" />
+            <e p="WaveGunState2.cs" t="Include" />
+            <e p="Wing1.cs" t="Include" />
+            <e p="Wing2.cs" t="Include" />
+            <e p="WingGun.cs" t="Include" />
+            <e p="WingLeft.cs" t="Include" />
+            <e p="WingRight.cs" t="Include" />
+          </e>
           <e p="Boundary.cs" t="Include" />
-          <e p="Bullet.cs" t="Include" />
           <e p="Coin.cs" t="Include" />
           <e p="coinType.cs" t="Include" />
-          <e p="DeActiveHandGun.cs" t="Include" />
-          <e p="EnemyType.cs" t="Include" />
+          <e p="Data" t="Include">
+            <e p="HighScoreData.cs" t="Include" />
+            <e p="SaveData.cs" t="Include" />
+          </e>
+          <e p="Enemy" t="Include">
+            <e p="BaseEnemy.cs" t="Include" />
+            <e p="EnemyType.cs" t="Include" />
+            <e p="MediumBullet.cs" t="Include" />
+            <e p="MediumEnemy.cs" t="Include" />
+            <e p="MediumFire.cs" t="Include" />
+            <e p="mEnemy3Bullet.cs" t="Include" />
+            <e p="mEnemy3Fire.cs" t="Include" />
+            <e p="RotateToPlayer.cs" t="Include" />
+          </e>
           <e p="ExplosionEffectType.cs" t="Include" />
-          <e p="FireTrigger.cs" t="Include" />
-          <e p="HandGun.cs" t="Include" />
-          <e p="HandGunHealth.cs" t="Include" />
           <e p="HealthManager.cs" t="Include" />
-          <e p="HealthPlayer.cs" t="Include" />
-          <e p="LevelManager.cs" t="Include" />
-          <e p="LevelTable.cs" t="Include" />
+          <e p="LevelLoader.cs" t="Include" />
+          <e p="LoopBackground" t="Include">
+            <e p="RepeatingBackground.cs" t="Include" />
+            <e p="ScrollingObject.cs" t="Include" />
+          </e>
           <e p="MainCamera.cs" t="Include" />
           <e p="MainMenu.cs" t="Include" />
-          <e p="MediumBullet.cs" t="Include" />
-          <e p="MediumEnemy.cs" t="Include" />
-          <e p="MediumFire.cs" t="Include" />
-          <e p="mEnemy3Bullet.cs" t="Include" />
-          <e p="mEnemy3Fire.cs" t="Include" />
-          <e p="MiniBullet.cs" t="Include" />
-          <e p="MiniGun.cs" t="Include" />
-          <e p="MiniGunLeft.cs" t="Include" />
-          <e p="MiniGunRight.cs" t="Include" />
+          <e p="Manager" t="Include">
+            <e p="AudioManager.cs" t="Include" />
+            <e p="DataManager.cs" t="Include" />
+            <e p="GameManager.cs" t="Include" />
+            <e p="LevelManager.cs" t="Include" />
+            <e p="LevelTable.cs" t="Include" />
+          </e>
+          <e p="Nhap" t="Include">
+            <e p="RotateMedium.cs" t="Include" />
+          </e>
           <e p="ObjectPutter.cs" t="Include" />
           <e p="Orbit.cs" t="Include" />
-          <e p="PlayerTouchControl.cs" t="Include" />
-          <e p="RepeatingBackground.cs" t="Include" />
-          <e p="RotateMedium.cs" t="Include" />
-          <e p="RotateToPlayer.cs" t="Include" />
-          <e p="ScrollingObject.cs" t="Include" />
-          <e p="ShipWeapon.cs" t="Include" />
-          <e p="SpawnCoin.cs" t="Include" />
+          <e p="Player" t="Include">
+            <e p="Bullet.cs" t="Include" />
+            <e p="HealthPlayer.cs" t="Include" />
+            <e p="PlayerTouchControl.cs" t="Include" />
+            <e p="ShipWeapon.cs" t="Include" />
+          </e>
           <e p="Spawner.cs" t="Include" />
           <e p="SpawnerInfo.cs" t="Include" />
           <e p="SpawnerTable.cs" t="Include" />
           <e p="SpawnerType.cs" t="Include" />
+          <e p="SupportShip" t="Include">
+            <e p="SupportShip.cs" t="Include" />
+            <e p="SupportShipBullet.cs" t="Include" />
+            <e p="SupportShipWeapon.cs" t="Include" />
+          </e>
+          <e p="UI" t="Include">
+            <e p="HighScorePanel.cs" t="Include" />
+            <e p="LosePanelControl.cs" t="Include" />
+            <e p="SaveDataPanel.cs" t="Include" />
+            <e p="SettingPanel.cs" t="Include" />
+            <e p="UpgradePanelControl.cs" t="Include" />
+            <e p="WinPanelControl.cs" t="Include" />
+          </e>
           <e p="UIControl.cs" t="Include" />
-          <e p="WaveBullet.cs" t="Include" />
-          <e p="WaveBullet2.cs" t="Include" />
-          <e p="WaveGunHealth.cs" t="Include" />
-          <e p="WaveGunState1.cs" t="Include" />
-          <e p="WaveGunState2.cs" t="Include" />
-          <e p="Wing1.cs" t="Include" />
-          <e p="Wing2.cs" t="Include" />
-          <e p="WingGun.cs" t="Include" />
-          <e p="WingLeft.cs" t="Include" />
-          <e p="WingRight.cs" t="Include" />
         </e>
         <e p="Sounds" t="Include" />
         <e p="TextMesh Pro" t="Include">
@@ -192,8 +263,9 @@
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
       <e p="Temp\Bin" t="ExcludeRecursive" />
+      <e p="Unity.PlayerPrefsEditor.Editor.csproj" t="IncludeRecursive" />
+      <e p="Unity.PlayerPrefsEditor.EditorResources.csproj" t="IncludeRecursive" />
+      <e p="Unity.PlayerPrefsEditor.Samples.SampleScene.csproj" t="IncludeRecursive" />
     </e>
-    <e p="C:\Users\PC\.Rider2019.1\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\PC\.Rider2019.1\system\resharper-host\local\Transient\ReSharperHost\v191\SolutionCaches\_BanMayBay.1406744508.00" t="ExcludeRecursive" />
   </component>
 </project>

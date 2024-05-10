@@ -6,6 +6,6 @@ public class MainCamera : MonoBehaviour
 {
     public void Awake()
     {
-        UnityEngine.Application.targetFrameRate = 60;
+        UnityEngine.Application.targetFrameRate = 120;
     }
 }

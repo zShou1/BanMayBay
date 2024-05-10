@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
@@ -8,6 +9,8 @@ public class UIControl : MonoBehaviour
     //Dung de Quan ly cac thanh phan cua Canvas
     [SerializeField]
     private TextMeshProUGUI coinText;
+    [SerializeField] 
+    private TextMeshProUGUI curentScoreText;
     [SerializeField]
     private TextMeshProUGUI currentWaveText;
     [SerializeField]
@@ -24,7 +27,6 @@ public class UIControl : MonoBehaviour
     {
         Time.timeScale = 1f;
         loseUI.SetActive(false);
-        PlayerPrefs.SetInt("Coin", 0);
         PlayerPrefs.HasKey("currentWave");
         if (!PlayerPrefs.HasKey("currentWave"))
         {
@@ -35,7 +37,8 @@ public class UIControl : MonoBehaviour
 
     void Update()
     {
-        coinText.text = PlayerPrefs.GetInt("Coin").ToString();
+        coinText.text = GameManager.Instance.TotalCoin.ToString();
+        curentScoreText.text = "Score: "+GameManager.Instance.CurrentScore.ToString();
         currentWaveText.text = PlayerPrefs.GetInt("currentWave").ToString();
         totalWaveText.text = PlayerPrefs.GetInt("totalWave").ToString();
         StartCoroutine(checkLose());
@@ -46,6 +49,7 @@ public class UIControl : MonoBehaviour
         yield return null;
         if (_player.active == false)
         {
+            /*GameManager.Instance.TotalScore += GameManager.Instance.CurrentScore;*/
             yield return new WaitForSeconds(2f);
             Time.timeScale = 0f;
             loseUI.SetActive(true);
@@ -64,13 +68,21 @@ public class UIControl : MonoBehaviour
 
     public void Reload()
     {
-        Time.timeScale = 1f;
 /*        PlayerPrefs.SetInt("Coin", 0);*/
-        SceneManager.LoadScene(1);  
-    }
-    public void Menu()
-    {
+        DOTween.KillAll();
+        SceneManager.LoadScene(1);
+        GameManager.Instance.CurrentLevel = 1;
+        GameManager.Instance.ResetTotalPrefs();
+        GameManager.Instance.ResetCurrentPrefs();
         Time.timeScale = 1f;
-        SceneManager.LoadScene(0);  
+    }
+    public void MenuOnLose()
+    {
+        DOTween.KillAll();
+        /*SceneManager.LoadScene(0);  */
+        /*GameManager.Instance.CurrentLevel = 1;*/
+        GameManager.Instance.TotalCoin -= GameManager.Instance.CurrentCoin;
+        PlayerPrefs.DeleteAll();
+        /*Time.timeScale = 1f;*/
     }
 }

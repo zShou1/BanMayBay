@@ -11,11 +11,12 @@ public class Coin : MonoBehaviour
 
     void Awake()
     {
-        PlayerPrefs.HasKey("Coin");
+        //set currentCoin=0
+        /*PlayerPrefs.HasKey("Coin");
         if (!PlayerPrefs.HasKey("Coin"))
         {
             PlayerPrefs.SetInt("Coin", 0);
-        }
+        }*/
     }
 
     private void OnEnable()
@@ -32,7 +33,9 @@ public class Coin : MonoBehaviour
     {
         if(collision.CompareTag("Player"))
         {
-            PlayerPrefs.SetInt("Coin", PlayerPrefs.GetInt("Coin") + coinValue);
+            /*PlayerPrefs.SetInt("Coin", PlayerPrefs.GetInt("Coin") + coinValue);*/
+            GameManager.Instance.CurrentCoin += coinValue;
+            GameManager.Instance.TotalCoin += coinValue;
             gameObject.SetActive(false);
         }
     }
